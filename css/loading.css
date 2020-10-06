@@ -1,0 +1,39 @@
+body{
+    height: -webkit-fill-availbale;
+    width: -webkit-fill-availbale;
+}
+
+.circular-loading{
+    position: absolute;
+    display: inline-block;
+    border: 3px solid #da5f24;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate_360 2s infinite linear;
+}
+.circular-loading::before{
+    content: "";
+    display: inline-block;
+    height: 10%;
+    width: 10%;
+    position: relative;
+    top: -10%;
+    background-color: #da5f24;
+    border-radius: 50%;
+}
+
+
+@keyframes rotate_360{
+    0%{
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotateZ(360deg);
+
+    }
+}
